@@ -1,0 +1,15 @@
+# --- Vision + input (required) ---------------------------------------------
+# mediapipe >= 0.10.30 removed the legacy `mp.solutions` API; this project uses
+# the Tasks `HandLandmarker` API, which is the supported path going forward.
+mediapipe>=0.10.30
+# mediapipe hard-depends on opencv-contrib-python (a superset of opencv-python).
+# Installing opencv-python alongside it puts two copies of `cv2` in the same
+# site-packages, which breaks on upgrade/uninstall, so only the contrib build is listed.
+opencv-contrib-python>=4.9
+numpy>=1.24
+pyautogui>=0.9.54
+pynput>=1.7.6
+
+# --- Voice (optional, isolated) ---------------------------------------------
+# Install with:  pip install -r requirements-voice.txt
+# The vision pipeline runs without these; main.py disables voice if they are missing.

@@ -1,0 +1,9 @@
+-r requirements.txt
+
+# Microphone capture. sounddevice ships wheels with PortAudio bundled (and is
+# already a mediapipe dependency), so no `brew install portaudio` / PyAudio build step.
+sounddevice>=0.4.6
+# Low-CPU streaming wake word detection (pretrained or custom-trained .onnx models).
+openwakeword>=0.6.0
+# Whisper via CTranslate2: command transcription and the default keyword wake backend.
+faster-whisper>=1.0.0
